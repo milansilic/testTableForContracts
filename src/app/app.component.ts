@@ -139,7 +139,7 @@ export class AppComponent {
             {
                columns: [
                   {
-                     image: await this.getBase64ImageFromURL("../../assets/images/logo.png"),
+                     image: await this.getBase64ImageFromURL("assets/images/logo.png"),
                      width: 230,
                      alignment: 'left',
                      margin: [0, 10, 0, 10]
@@ -169,7 +169,7 @@ export class AppComponent {
             {
                columns: [
                   {
-                     image: await this.getBase64ImageFromURL("../../assets/images/package.png"),
+                     image: await this.getBase64ImageFromURL("assets/images/package.png"),
                      width: 120,
                      alignment: 'left',
                      margin: [0, 0, 0, 0]
@@ -272,7 +272,7 @@ export class AppComponent {
             {
                columns: [
                   {
-                     image: await this.getBase64ImageFromURL("../../assets/images/stamp1.png"),
+                     image: await this.getBase64ImageFromURL("assets/images/stamp1.png"),
                      width: 212,
                      alignment: 'left',
                      // margin: [0, 10, 0, 0]
@@ -282,7 +282,7 @@ export class AppComponent {
                      text: ''
                   },
                   {
-                     image: await this.getBase64ImageFromURL("../../assets/images/stamp2.png"),
+                     image: await this.getBase64ImageFromURL("assets/images/stamp2.png"),
                      width: 80,
                      alignment: 'left',
                      margin: [-30, 0, 0, 0]
