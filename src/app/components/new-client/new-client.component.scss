@@ -1,0 +1,20 @@
+:host { border: 1px solid green;
+   display: block;
+   max-width: 100%;
+   overflow: hidden  ;
+}
+
+form {border: 2px solid dodgerblue;
+   // display: flex;
+   // flex-wrap: wrap;
+   // gap: 20px;
+   // justify-content: start;
+   display: grid;
+   gap: 2vw;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   width: 100%;
+
+   label { border: 2px solid dodgerblue;
+      min-width: 200px;
+   }
+}

@@ -1,0 +1,35 @@
+<form #myForm="ngForm">
+   <label for="cntrNum">Broj ugovora</label>
+   <input type="number" name="cntrNum" id="cntrNum" ngModel>
+   <label for="cntrDate">Datum sklapanja</label>
+   <input type="text" name="cntrDate" id="cntrDate" ngModel>
+   <label for="fName">Ime</label>
+   <input type="text" name="fName" id="fName" ngModel>
+   <label for="lName">Prezime</label>
+   <input type="text" name="lName" id="lName" ngModel>
+   <label for="address">Ulica i Broj</label>
+   <input type="text" name="address" id="address" ngModel>
+   <label for="PTT">PTT</label>
+   <input type="text" name="PTT" id="PTT" ngModel>
+   <label for="city">Grad</label>
+   <input type="text" name="city" id="city" ngModel>
+   <label for="mPhone">Telefon</label>
+   <input type="text" name="mPhone" id="mPhone" ngModel>
+   <label for="mail">Mail</label>
+   <input type="email" name="mail" id="mail" ngModel>
+   <label for="plates">Tablice</label>
+   <input type="text" name="plates" id="plates" ngModel>
+   <label for="vehType">Vrsta vozila</label>
+   <input type="text" name="vehType" id="vehType" ngModel>
+   <label for="vehCol">Boja vozila</label>
+   <input type="text" name="vehCol" id="vehCol" ngModel>
+   <label for="vehicle">Marka i tip</label>
+   <input type="text" name="vehicle" id="vehicle" ngModel>
+   <label for="vehManYear">Godina proizvodnje</label>
+   <input type="text" name="vehManYear" id="vehManYear" ngModel>
+   <label for="dateStart">Pocetak vazenja ugovora</label>
+   <input type="text" name="dateStart" id="dateStart" ngModel>
+   <label for="dateEnd">Istek vazenja ugovora</label>
+   <input type="text" name="dateEnd" id="dateEnd" ngModel>
+</form>
+<button (click)="passMyFormData(myForm.form.value)">DODAJ NOVOG KLIJENTA U TABELU</button>
