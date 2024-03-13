@@ -16,11 +16,7 @@ export class ClientsService {
       );
    }
 
-   emmitNewClient(ob: object) {
-      this.newClientEvn.emit(ob);
-   }
-
-   postData(data: object): Observable<any> {
+   clieSrPostData(data: object): Observable<any> {
       return this.http.post(url, data);
    }
 }

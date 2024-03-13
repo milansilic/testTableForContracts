@@ -1,0 +1,101 @@
+:host {
+   position: fixed;
+   width: 100vw;
+   height: 100vh;
+   background-color: rgba(#bbb, 0.9);
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   overflow: hidden;
+   z-index: 2;
+}
+
+form {
+   flex-basis: 80%;
+   display: grid;
+   gap: 1.5vw 2vw;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   margin-bottom: 3vmax;
+
+   label,
+   input {
+      display: block;
+      width: 100%;
+   }
+
+   label {
+      padding: .2vmax 0;
+      font-size: 1rem;
+      font-size: clamp(1rem, 1.1vw, 1.1rem);
+   }
+
+   input {
+      padding: .5vmax .6vmax;
+      background-color: #eee;
+      color: #333;
+      font-size: 1rem;
+      font-size: clamp(1rem, 1.3vw, 1.3rem);
+      line-height: 1;
+   }
+}
+
+.radio {
+   width: 100%;
+   grid-column: 1 / 5;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   margin-bottom: 4vw;
+
+   label {
+      width: 10%; 
+   }
+
+   img {
+      display: block;
+      width: 100%; 
+   }
+
+   /* HIDE RADIO */
+   [type=radio] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+   }
+
+   /* IMAGE STYLES */
+   [type=radio]+img {
+      opacity: .4;
+      will-change: opacity;
+      transition: opacity .2s ease-out;
+      cursor: pointer;
+   }
+
+   /* CHECKED STYLES */
+   [type=radio]:checked+img {
+      opacity: 1;
+   }
+
+}
+
+.btns {
+   flex-basis: 80%;
+   text-align: right;
+}
+
+button {
+   border-radius: 5px;
+   outline: 3px solid #fff;
+   box-shadow: 1px 1px 10px rgba(#000000, 0.5);
+   padding: .6vmax 1vmax .54vmax;
+   margin-left: 2vmax;
+   color: #eee;
+   font-size: 1rem;
+   font-weight: 600;
+   letter-spacing: .02em;
+   line-height: 1.4;
+   text-transform: uppercase;
+}

@@ -1,6 +1,29 @@
-:host { border: 1px solid green;
+:host {
    display: block;
    max-width: 100%;
-   overflow: hidden  ;
+   overflow: hidden;
 }
-table {border: 2px solid red;}
+
+.mat-mdc-header-row {
+   background-color: #eaeaea;
+}
+
+.mdc-data-table__header-cell {
+   padding-top: 2px;
+}
+
+tr {
+   cursor: pointer;
+}
+
+.selected {
+   outline: 3px solid dodgerblue;
+}
+
+.nac {
+   background-color: rgba(lightskyblue, 0.5);
+}
+
+.eur {
+   background-color: rgba(lightgreen, 0.5);
+}

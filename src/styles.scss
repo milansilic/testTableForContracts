@@ -1,4 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+button {cursor: pointer;}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: none;
+}
+
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+img {
+   display: block;
+}
+
+ul {
+   list-style: none;
+}
+
+a {
+   text-decoration: none;
+}
+
+.btn-add {
+   background-color: #19e6b3;
+}
+
+.btn-clear {
+   background-color: #ffaa80;
+}
+
+.btn-cancel {
+   background-color: #ff6666;
+}

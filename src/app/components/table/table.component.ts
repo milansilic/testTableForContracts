@@ -9,7 +9,6 @@ import * as pdfFonts from 'pdfmake/build/vfs_fonts';
 import { TDocumentDefinitions } from "pdfmake/interfaces";
 import { NgForm } from "@angular/forms";
 import { ClientsService } from "src/app/services/clients.service";
-import { HttpService } from "src/app/services/http.service";
 import { Client } from "src/app/models/client.model";
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -43,6 +42,7 @@ export class TableComponent implements OnInit {
    dataSource: any = [];
    displayedColumns: string[] = ['cntrNum', 'cntrDate', 'fName', 'lName', 'address', 'PTT', 'city', 'mPhone', 'mail', 'plates', 'vehType', 'vehCol', 'vehicle', 'vehManYear', 'dateStart', 'dateEnd'];
    newRow: object | any;
+   selection: any;
 
 
    constructor(private clientsService: ClientsService) { }
@@ -50,6 +50,8 @@ export class TableComponent implements OnInit {
    ngOnInit(): void {
       this.clientsService.getData().subscribe(data => {
          this.dataSource = data;
+         console.log(data);
+         
       });
 
       this.clientsService.newClientEvn.subscribe(
@@ -77,6 +79,9 @@ export class TableComponent implements OnInit {
       this.vehManYear = val.vehManYear
       this.dateStart = val.dateStart
       this.dateEnd = val.dateEnd
+      console.log(val);
+
+      this.selection = this.selection == val ? null : val;
    }
 
    // RENDER IMAGE FOR PDF

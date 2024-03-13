@@ -65,7 +65,13 @@
    </ng-container>
 
    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-   <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="getRow(row)"></tr>
+   <tr 
+      mat-row 
+      *matRowDef="let row; columns: displayedColumns;" 
+      [class.nac]="row.pcg==1"
+      [class.eur]="row.pcg==2"
+      [class.selected]="selection?.id==row.id"
+      (click)="row.selected = !row.selected; getRow(row)"></tr>
 </table>
 
 <div class="btns">

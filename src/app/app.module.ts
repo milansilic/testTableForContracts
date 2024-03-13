@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { ContractTemplateComponent } from './contract-template/contract-template.component';
 import { TableComponent } from './components/table/table.component';
 import { ControlsComponent } from './components/controls/controls.component';
-import { NewClientComponent } from './components/new-client/new-client.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatSortModule } from '@angular/material/sort';
 // import { MatTableModule } from '@angular/material/table';
@@ -19,8 +18,8 @@ import { MatSortModule } from '@angular/material/sort'; // Optional for sorting
 import { MatPaginatorModule } from '@angular/material/paginator'; // Optional for pagination
 
 import { ClientsService } from './services/clients.service';
-import { HttpService } from './services/http.service';
-
+import { FormService } from './services/form.service';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
@@ -29,7 +28,7 @@ import { HttpService } from './services/http.service';
       ContractTemplateComponent,
       TableComponent,
       ControlsComponent,
-      NewClientComponent
+      FormComponent
    ],
    imports: [
       BrowserModule,
@@ -42,7 +41,10 @@ import { HttpService } from './services/http.service';
       MatFormFieldModule,
       HttpClientModule
    ],
-   providers: [ClientsService, HttpService],
+   providers: [
+      ClientsService,
+      FormService
+   ],
    bootstrap: [AppComponent]
 })
 export class AppModule { }

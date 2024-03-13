@@ -1,0 +1,88 @@
+<form #myForm="ngForm">
+   <span class="radio">
+      <label>
+         <input type="radio" name="pcg" value="1" ngModel>
+         <img src="assets/images/01nac.webp" alt="Option 1" width="40">
+       </label>
+       
+       <label>
+         <input type="radio" name="pcg" value="2" ngModel>
+         <img src="assets/images/02eur+.webp" alt="Option 2" width="40">
+       </label>
+   </span>
+   
+   <!-- <span>
+      <label for="pcg">Paket</label>
+      <input type="number" name="pcg" id="pcg" ngModel>
+   </span> -->
+
+   <span>
+      <label for="cntrNum">Broj ugovora</label>
+      <input type="number" name="cntrNum" id="cntrNum" ngModel>
+   </span>
+   <span>
+      <label for="cntrDate">Datum sklapanja</label>
+      <input type="text" name="cntrDate" id="cntrDate" ngModel>
+   </span>
+   <span>
+      <label for="fName">Ime</label>
+      <input type="text" name="fName" id="fName" ngModel>
+   </span>
+   <span>
+      <label for="lName">Prezime</label>
+      <input type="text" name="lName" id="lName" ngModel>
+   </span>
+   <span>
+      <label for="address">Ulica i Broj</label>
+      <input type="text" name="address" id="address" ngModel>
+   </span>
+   <span>
+      <label for="PTT">PTT</label>
+      <input type="text" name="PTT" id="PTT" ngModel>
+   </span>
+   <span>
+      <label for="city">Grad</label>
+      <input type="text" name="city" id="city" ngModel>
+   </span>
+   <span>
+      <label for="mPhone">Telefon</label>
+      <input type="text" name="mPhone" id="mPhone" ngModel>
+   </span>
+   <span>
+      <label for="mail">Mail</label>
+      <input type="email" name="mail" id="mail" ngModel>
+   </span>
+   <span>
+      <label for="plates">Tablice</label>
+      <input type="text" name="plates" id="plates" ngModel>
+   </span>
+   <span>
+      <label for="vehType">Vrsta vozila</label>
+      <input type="text" name="vehType" id="vehType" ngModel>
+   </span>
+   <span>
+      <label for="vehCol">Boja vozila</label>
+      <input type="text" name="vehCol" id="vehCol" ngModel>
+   </span>
+   <span>
+      <label for="vehicle">Marka i tip</label>
+      <input type="text" name="vehicle" id="vehicle" ngModel>
+   </span>
+   <span>
+      <label for="vehManYear">Godina proizvodnje</label>
+      <input type="text" name="vehManYear" id="vehManYear" ngModel>
+   </span>
+   <span>
+      <label for="dateStart">Pocetak vazenja ugovora</label>
+      <input type="text" name="dateStart" id="dateStart" ngModel>
+   </span>
+   <span>
+      <label for="dateEnd">Istek vazenja ugovora</label>
+      <input type="text" name="dateEnd" id="dateEnd" ngModel>
+   </span>
+</form>
+<div class="btns">
+   <button class="btn-add" (click)="postData(myForm.form.value)">Dodaj klijenta</button>
+   <button class="btn-clear" (click)="cleanFields()">Očisti polja</button>
+   <button class="btn-cancel" (click)="closeAdd()">Odustani</button>
+</div>

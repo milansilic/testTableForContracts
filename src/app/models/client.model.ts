@@ -15,6 +15,7 @@ export class Client {
    vehManYear: string;
    dateStart: string;
    dateEnd: string;
+   pcg: string;
 
    constructor(
       cntrNum: number,
@@ -33,6 +34,7 @@ export class Client {
       vehManYear: string,
       dateStart: string,
       dateEnd: string,
+      pcg: string,
    ) {
       this.cntrNum = cntrNum;
       this.cntrDate = cntrDate;
@@ -50,5 +52,6 @@ export class Client {
       this.vehManYear = vehManYear;
       this.dateStart = dateStart;
       this.dateEnd = dateEnd;
+      this.pcg = pcg;
    }
 }
